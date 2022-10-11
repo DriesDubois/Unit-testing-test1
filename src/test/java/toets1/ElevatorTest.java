@@ -17,15 +17,15 @@ public class ElevatorTest {
     @Test
     void testAccesToFloorsFromBasement (){
         Elevator elevator = new Elevator("405");
-        int[] result= elevator.activeButtons(-1);
-        assertArrayEquals(new int[]{0,4,10},result);
+        int[] result= elevator.activeButtons(0);
+        assertArrayEquals(new int[]{4,10},result);
     }
 
     @Test
     void testAccesToDifferentFloorFromBasement (){
         Elevator elevator = new Elevator("605");
-        int[] result= elevator.activeButtons(-1);
-        assertArrayEquals(new int[]{0,6,10},result);
+        int[] result= elevator.activeButtons(6);
+        assertArrayEquals(new int[]{0,10},result);
     }
 
     @Test
