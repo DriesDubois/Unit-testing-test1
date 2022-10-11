@@ -26,6 +26,7 @@ public class ElevatorTest {
         Elevator elevator = new Elevator("605");
         int[] result= elevator.activeButtons(6);
         assertArrayEquals(new int[]{0,10},result);
+        //log
     }
 
     @Test
