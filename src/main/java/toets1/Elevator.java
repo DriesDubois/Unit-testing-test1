@@ -28,6 +28,10 @@ public class Elevator {
         accessibleFloors.add(Character.getNumericValue(badge.charAt(0)));
         accessibleFloors.remove(Integer.valueOf(currentFloor));
         Collections.sort(accessibleFloors);
+        if(accessibleFloors.contains(currentFloor)) return null;
+
+
+
         return convertIntegers(accessibleFloors);
     }
 
