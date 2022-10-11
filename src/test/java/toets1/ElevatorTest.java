@@ -8,10 +8,10 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 public class ElevatorTest {
 
     @Test
-    void testAccesToLobbyAndRestaurant (){
-        Elevator elevator = new Elevator("504");
+    void testAccesToLobbyAndRestaurantAndCurrentFloor (){
+        Elevator elevator = new Elevator("405");
         int[] result= elevator.activeButtons(4);
-        assertArrayEquals(result,new int[]{0,10});
+        assertArrayEquals(result,new int[]{0,4,10});
     }
 
     @Test

@@ -3,6 +3,7 @@ package toets1;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class Elevator {
     final private String badge;
@@ -22,8 +23,10 @@ public class Elevator {
             if (i==0 || i==10){
                 accessibleFloors.add(i);
             }
-        }
 
+        }
+        accessibleFloors.add(Character.getNumericValue(badge.charAt(0)));
+        Collections.sort(accessibleFloors);
         return convertIntegers(accessibleFloors);
     }
 
