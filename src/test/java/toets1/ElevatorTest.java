@@ -22,6 +22,13 @@ public class ElevatorTest {
     }
 
     @Test
+    void testCurrentFloorNegative (){
+        Elevator elevator = new Elevator("605");
+        int[] result= elevator.activeButtons(-1);
+        assertArrayEquals(result,new int[]{0,6,10});
+    }
+
+    @Test
     void testAccesToSameFloor (){
         Elevator elevator = new Elevator("605");
         int[] result= elevator.activeButtons(6);
