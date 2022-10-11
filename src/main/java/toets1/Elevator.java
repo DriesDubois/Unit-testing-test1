@@ -10,6 +10,10 @@ public class Elevator {
     }
 
     public int[] activeButtons() {
+        if (badge.equals("")){
+            return null;
+        }
         return new int[]{5,0,4};
+
     }
 }
