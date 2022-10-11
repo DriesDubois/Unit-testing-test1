@@ -29,7 +29,7 @@ public class ElevatorTest {
     }
 
     @Test
-    void testAccesToSameFloor (){
+    void testAccesFromOwnFloor (){
         Elevator elevator = new Elevator("605");
         int[] result= elevator.activeButtons(6);
         assertArrayEquals(result,new int[]{0,10});
