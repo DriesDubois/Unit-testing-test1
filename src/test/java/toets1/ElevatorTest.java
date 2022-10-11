@@ -10,7 +10,7 @@ public class ElevatorTest {
     @Test
     void testAccesToLobbyAndRestaurantAndCurrentFloor (){
         Elevator elevator = new Elevator("405");
-        int[] result= elevator.activeButtons(4);
+        int[] result= elevator.activeButtons(5);
         assertArrayEquals(result,new int[]{0,4,10});
     }
 
@@ -19,6 +19,13 @@ public class ElevatorTest {
         Elevator elevator = new Elevator("605");
         int[] result= elevator.activeButtons(4);
         assertArrayEquals(result,new int[]{0,6,10});
+    }
+
+    @Test
+    void testAccesToSameFloor (){
+        Elevator elevator = new Elevator("605");
+        int[] result= elevator.activeButtons(6);
+        assertArrayEquals(result,new int[]{0,10});
     }
 
     @Test
