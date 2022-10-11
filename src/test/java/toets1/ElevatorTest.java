@@ -21,6 +21,13 @@ public class ElevatorTest {
         assertArrayEquals(result,null);
     }
 
+    @Test
+    void testBadgeOfStaffMember (){
+        Elevator elevator = new Elevator("S");
+        int[] result= elevator.activeButtons(4);
+        assertArrayEquals(result,new int[]{-2,-1,0,1,2,3,4,5,6,7,8,9,10});
+    }
+
 
 
 }
