@@ -15,9 +15,9 @@ public class ElevatorTest {
     }
 
     @Test
-    void testAccesToDifferentFloor (){
+    void testAccesToDifferentFloorFromBasement (){
         Elevator elevator = new Elevator("605");
-        int[] result= elevator.activeButtons(4);
+        int[] result= elevator.activeButtons(-1);
         assertArrayEquals(result,new int[]{0,6,10});
     }
 
