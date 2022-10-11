@@ -9,11 +9,11 @@ public class Elevator {
         this.badge = badge;
     }
 
-    public int[] activeButtons() {
+    public int[] activeButtons(int currentFloor) {
         if (badge.equals("")){
             return null;
         }
-        return new int[]{5,0,4};
+        return new int[]{0,4,10};
 
     }
 }

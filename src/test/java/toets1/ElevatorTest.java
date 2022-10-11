@@ -10,14 +10,14 @@ public class ElevatorTest {
     @Test
     void printBadgeNumber (){
         Elevator elevator = new Elevator("504");
-        int[] result= elevator.activeButtons();
-        assertArrayEquals(result,new int[]{5,0,4});
+        int[] result= elevator.activeButtons(4);
+        assertArrayEquals(result,new int[]{0,4,10});
     }
 
     @Test
     void testBadgeNotScanned (){
         Elevator elevator = new Elevator("");
-        int[] result= elevator.activeButtons();
+        int[] result= elevator.activeButtons(4);
         assertArrayEquals(result,null);
     }
 
