@@ -2,9 +2,10 @@ package toets1;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Elevator {
-    private String badge;
+    final private String badge;
 
     public Elevator(String badge) {
         this.badge = badge;
@@ -15,7 +16,15 @@ public class Elevator {
             return null;
         }
         if (badge.equals("S")) return new int[]{-2,-1,0,1,2,3,4,5,6,7,8,9,10};
-        return new int[]{0,10};
+
+        ArrayList<Integer> accessibleFloors = new ArrayList<>();
+        for (int i = -2; i < 11 ; i++) {
+            if (i==0 || i==10){
+                accessibleFloors.add(i);
+            }
+        }
+
+        return convertIntegers(accessibleFloors);
     }
 
     public static int[] convertIntegers(ArrayList<Integer> integers)
