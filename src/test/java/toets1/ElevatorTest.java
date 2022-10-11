@@ -15,6 +15,13 @@ public class ElevatorTest {
     }
 
     @Test
+    void testAccesToDifferentFloor (){
+        Elevator elevator = new Elevator("605");
+        int[] result= elevator.activeButtons(4);
+        assertArrayEquals(result,new int[]{0,6,10});
+    }
+
+    @Test
     void testBadgeNotScanned (){
         Elevator elevator = new Elevator("");
         int[] result= elevator.activeButtons(4);
